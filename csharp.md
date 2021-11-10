@@ -160,3 +160,8 @@ using (var transaction = context.Database.BeginTransaction())
 	[EnableQuery]
     public IActionResult Get() => Ok(context.Shares);
 	```
+	
+## Fixed Ports
+
+Add the following code to `Program.cs`:
+```builder.WebHost.UseUrls("http://localhost:5000", "https://localhost:5001");```
