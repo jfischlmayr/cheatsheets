@@ -1,13 +1,10 @@
-
-# Creating an Angular App
-
-## Introduction
-
+# Introduction
+[Official Angular Cheatsheet](https://angular.io/guide/cheatsheet)
 
 Install the [*Angular CLI*](https://angular.io/cli) globally on your computer (`npm install -g @angular/cli`).
 
 Also install [*Nx*](https://nx.dev/latest/angular/getting-started/nx-setup) globally on your computer (`npm install -g nx`).
-
+# Creating an Angular App
 ## Create the App
 
 1. Create Angular workspace with an initial project using [`ng new`](https://angular.io/cli/new):
@@ -76,3 +73,25 @@ Also install [*Nx*](https://nx.dev/latest/angular/getting-started/nx-setup) glob
     | Run linter (quality check for your code) | `npm run lint`  |
     | Build your app                           | `npm run build` |
     | Start debugging your app                 | `npm start`     |
+
+# Code
+## Data Binding
+* **Interpolation**: ```{{ data }}```
+* **Event Binding**: 
+	* In .html: ```(click)="onClick()"```
+	* In .ts: ```public onClick(){}```
+* **One-Way**: ```[ data ]```
+	* For input: ```<input type="number" [value]="data" />```
+* **Two-Way** (banana-in-a-box):
+	* Add *FormsModule* to *app.module.ts*
+	* ```[( data )]```
+* **Structural**: 
+	* **If-Statement**: ```<p *ngIf="data > 50">This is a large number!</p>```
+	* **For-Loop**: 
+		```	
+		<ul>
+			<li *ngfor="let a of answers">
+				{{ a }}
+			</li>
+		</ul>
+		```
