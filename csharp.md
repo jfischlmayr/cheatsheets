@@ -165,3 +165,8 @@ using (var transaction = context.Database.BeginTransaction())
 
 Add the following code to `Program.cs`:
 ```builder.WebHost.UseUrls("http://localhost:5000", "https://localhost:5001");```
+
+## Create new SQL Server instance
+```bash
+sqllocaldb create <name>
+```
